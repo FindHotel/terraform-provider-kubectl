@@ -1,7 +1,6 @@
 *.dll
 *.exe
 .DS_Store
-.vscode
 example.tf
 terraform.tfplan
 terraform.tfstate

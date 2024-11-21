@@ -1,15 +1,12 @@
 # Kubernetes "kubectl" Provider 
 
-This provider is the best way of managing Kubernetes resources in Terraform, by allowing you to use the thing 
-Kubernetes loves best - yaml!
+This provider offers the most effective method for handling Kubernetes resources in Terraform. It empowers you to leverage what Kubernetes values most - YAML!
 
-This core of this provider is the `kubectl_manifest` resource, allowing free-form yaml to be processed and applied against Kubernetes.
-This yaml object is then tracked and handles creation, updates and deleted seamlessly - including drift detection!
+At the heart of this provider lies the kubectl_manifest resource, enabling the processing and application of free-form YAML directly to Kubernetes. This YAML object is meticulously monitored and manages the entire lifecycle, from creation and updates to seamless deletion, including drift detection.
 
-A set of helpful data resources to process directories of yaml files and inline templating is available.
+The terraform-provider-kubectl has gained widespread adoption in numerous extensive Kubernetes installations, serving as the primary tool for orchestrating the complete lifecycle of Kubernetes resources
 
-This `terraform-provider-kubectl` provider has been used by many large Kubernetes installations to completely
-manage the lifecycle of Kubernetes resources. 
+This terraform-provider-kubectl provider has been originally forked from `gavinbunney/kubectl` and synced with `alekc/kubectl`.
 
 ## Installation
 
@@ -24,7 +21,7 @@ terraform {
   required_providers {
     kubectl = {
       source  = "FindHotel/kubectl"
-      version = ">= 1.14.1"
+      version = ">= 2.0.0"
     }
   }
 }
@@ -122,5 +119,4 @@ $ make testacc
 
 ### Inspiration
 
-Thanks to the original provider by [nabancard and lawrecncegripper](https://github.com/nabancard/terraform-provider-kubernetes-yaml) on the original base of this provider.
-
+Thanks to the original provider by [gavinbunney](https://github.com/gavinbunney/terraform-provider-kubectl) on the original base of this provider. Current version has been forked from 1.14.

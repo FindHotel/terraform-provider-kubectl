@@ -1,5 +1,3 @@
-provider "kubectl" {}
-
 resource "kubectl_manifest" "test" {
     yaml_body = <<YAML
 apiVersion: v1
@@ -16,4 +14,3 @@ spec:
       targetPort: 9090
 YAML
 }
-
