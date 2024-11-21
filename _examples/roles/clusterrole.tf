@@ -1,6 +1,3 @@
-provider "kubectl" {}
-
-
 resource "kubectl_manifest" "account" {
     yaml_body = <<YAML
 apiVersion: v1
@@ -29,3 +26,4 @@ subjects:
     namespace: kube-system
 YAML
 }
+
